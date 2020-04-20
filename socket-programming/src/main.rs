@@ -25,7 +25,7 @@ fn main() {
 
             }
             "client"=>{
-
+                tcp_client::connect(address).unwrap_or_else(|e| error!("{}", e));
             }
             _=> {
                 missind_role();
@@ -33,7 +33,7 @@ fn main() {
         },
         "udp"=>match role{
             "server"=>{
-
+                
             }
             "client"=>{
 
